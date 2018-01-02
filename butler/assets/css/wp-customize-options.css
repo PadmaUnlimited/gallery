@@ -1,0 +1,66 @@
+/* imageradio */
+.btr-imageradio fieldset {
+	margin-left: -5px;
+}
+.btr-imageradio .radio-label {
+	padding-left: 5px;
+}
+.btr-imageradio .has-image {
+	width: auto;
+	display: inline-block;
+	line-height: 0;
+}
+.btr-imageradio .has-image img {
+	padding: 1px;
+	border: 2px solid #eee;
+	width: 33px;
+	height: 33px;
+	margin-bottom: 5px;
+}
+.btr-imageradio .has-image.selected img {
+	border-color: #2ea2cc;
+}
+.btr-imageradio .has-image input {
+	display: none;
+}
+
+
+/* Slider */
+.btr-slider .slider-field {
+	border-radius: 5px;
+	width: 200px;
+	height: 10px;
+	border: 1px solid #ccc;
+	display: block;
+	float: left;
+	margin: 3px 0 0;
+	position: relative; 
+}
+.btr-slider .ui-slider-range { 
+	background: #ddd; 
+	height: 10px; 
+	border-radius: 4px;
+}
+.btr-slider .ui-slider-handle { 
+	background: #bbb;
+	border-radius: 8px;
+    display: block;
+    height: 16px;
+	width: 16px;
+    margin: -13px 0 0 -8px;
+    position: absolute; 
+    cursor: pointer; 
+}
+.btr-slider .ui-slider-handle.ui-state-active { 
+	background: #aaa;
+	outline: 0;
+}
+.btr-slider .slider-value,
+.btr-slider .slider-unit { 
+	font-size: 11px; 
+	float: left;
+	margin: 0;
+}
+.btr-slider .slider-value { 
+	margin-left: 5px;
+}

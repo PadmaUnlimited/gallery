@@ -1,0 +1,43 @@
+= 1.2.2 =
+* Added field.min.css missing file.
+* Fixed butler_url_to_path() issue when site is in a sub directory.
+* Fixed butler_path_to_url() issue when site is in a sub directory.
+
+= 1.2.1 =
+* added styling for term-meta fields.
+* added backwards compatibility for butler_load_components action.
+* fixed butler_register_framework() function issue.
+
+= 1.2.0 =
+* Added image handler component.
+* Added term meta component.
+* Added WP customize component.
+* Added _options suffix to options group name stored in the db.
+* Added some new useful utility functions.
+* Major structural changes and improvement on the fields, post-meta and options components (completely re-written).
+* Replaced butler_load_component_once() function with butler_register_framework().
+* Replaced butler_register_metabox() function with butler_register_post_meta().
+* Replaced icons with WordPress dashicons and therefore dropped support for WP before 3.8.
+* Replaced "activation" option parameter with "activation" option type.
+* Changed "meta-boxes" component name to "post-meta".
+* Changed "inputs" component name to "fields".
+* Changed "load-assets" to "load_assets" for the butler_register_meta_box() function args.
+* Changed option to register as metabox and display as metabox.
+* Changed options.css and options.js to fields.css and fields.js.
+* Removed butler_remove_options_group() function.
+* Removed butler_remove_option() function.
+* Removed uikit and ui scripts from the butler_enqueue_options_assets() function.
+* Removed media.css files.
+* Removed gallery.css and gallery.js files.
+
+= 1.1.0 =
+* Major structural changes and improvements.
+* Changed custom meta-boxes template variable $meta to $value.
+* Changed custom meta-boxes template variable $field to $option.
+
+= 1.0.2 =
+* Fixed tab selector issue.
+
+= 1.0.1 =
+* Moved hooks the classes files and removed hooks.php files.
+* Fixed butler_load_depedencies to prevent having twice the same class loading.

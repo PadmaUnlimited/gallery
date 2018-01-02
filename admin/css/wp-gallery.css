@@ -1,0 +1,60 @@
+/* all meta boxes
+*************************************************/
+#display_hwr_gallery .inside { margin-top: 18px; }
+.hwr-gallery-options { overflow: hidden; }
+.hwr-gallery-options label,
+.hwr-gallery-options span.hwr-field-description { float: left; clear: both; }
+.hwr-gallery-options label { margin-top: 10px; font-weight: bold; }
+.hwr-gallery-options span.hwr-field-description { margin-bottom: 10px; color: #888; font-size: 11px; font-style: italic; }
+.hwr-gallery-options .drag-notice { float: left; font-family: Comic Sans MS, sans-serif; color: #21759B; line-height: 1.2em; margin: 0 0 0 10px; padding: 5px 25px 0 0; background: transparent url(../images/drag-notice.png) 165px 6px no-repeat; }
+.hwr-gallery-options .hwr-upload-image { float: left; width: auto; }
+.hwr-gallery-options .hwr-upload-image.browser { float: none; }
+.hwr-gallery-options .hwr-thumbnail-count { float: right; line-height: 1.2em; padding-top: 6px; }
+.hwr-gallery-options .hwr-no-thumbnail { display: none; float: left; margin: 29px 0 50px; width: 100%; text-align: center; }
+.hwr-gallery-options .drag-notice { display: none; }
+
+/* applied to all meta boxes elements */
+.hwr-gallery-options input[type='text'],
+.hwr-gallery-options .wp-editor-wrap { width: 100%; margin: 5px 0; float: left; clear: both; }
+
+/* wysiwyg */
+.hwr-gallery-options .wp-editor-wrap { margin-top: -25px; }
+
+
+/* gallery meta box
+*************************************************/
+.hwr-thumbnails { min-height: 194px; float: left; clear: both; margin: 15px 0 5px; padding: 15px 13px; width: 100%; border: 1px solid #ddd; background-color: #e9e9e9; }
+.hwr-thumbnail { float: left; margin: 10px; padding: 5px; border: 1px solid #ccc; background-color: white; position: relative; overflow: hidden; }
+.hwr-image-wrap { line-height: 0; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+.hwr-state-highlight { float: left; margin: 10px; border: 3px dashed #ccc; }
+.hwr-image-wrap img { position: absolute; top: 0; left: 0; }
+
+/* thumbnail toolbar */
+.hwr-thumbnail-toolbar { display: none; position: absolute; top: -1px; left: -1px; width: 100%; height: 100%; border: 1px solid #444; }
+.hwr-thumbnail-toolbar ul { position: absolute; top: 50%; left: 50%; margin-top: -20px;  margin-left: -72px; list-style: none; line-height: 1em; }
+.hwr-thumbnail-toolbar li { float: left; margin: 0 0 0 7px; }
+.hwr-thumbnail-toolbar li a { display: block; width: 41px; height: 40px; text-indent: -999em; background: transparent url(../images/toolbar-sprite.png) no-repeat 0 0; outline: 0; transition-duration: 0!important; }
+.hwr-thumbnail-toolbar li a.hwr-drag { background-position: 0 -201px; }
+.hwr-thumbnail-toolbar li a.hwr-edit { background-position: 0 -101px; }
+.hwr-thumbnail-toolbar li a.hwr-remove { background-position: 0 -1px; }
+.hwr-thumbnail-toolbar li a.hwr-drag:hover { background-position: 0 -251px; cursor: move; }
+.hwr-thumbnail-toolbar li a.hwr-edit:hover { background-position: 0 -151px; }
+.hwr-thumbnail-toolbar li a.hwr-remove:hover { background-position: 0 -51px; }
+
+
+/* thickbox iframe parent fix
+*************************************************/
+#TB_window { top: 50px !important; margin-top: 0 !important; }
+
+
+/* Cross browser
+*************************************************/
+.hwr-thumbnail-toolbar { background: rgb(0, 0, 0) transparent;  background: rgba(0, 0, 0, 0.6) ;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; }
+.hwr-thumbnails { moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+.hwr-thumbnails,
+.hwr-thumbnail-toolbar,
+.hwr-thumbnail { moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.hwr-thumbnail { -webkit-box-shadow: 0 0 5px rgba(150, 150, 150, 0.2);-moz-box-shadow: 0 0 5px rgba(150, 150, 150, 0.2); box-shadow:0 0 5px rgba(150, 150, 150, 0.2); }
+
+.hwr-image-wrap { -webkit-transform: translate(50%,50%); -moz-transform: translate(50%,50%); -ms-transform: translate(50%,50%); -o-transform: translate(50%,50%);transform: translate(50%,50%); }
+.hwr-image-wrap img { -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -o-transform: translate(-50%,-50%);transform: translate(-50%,-50%); }

@@ -1,0 +1,9 @@
+/* attachements
+*************************************************/
+.wp_attachment_details { margin-bottom: 1.2em; }
+.compat-attachment-fields { width: 100%; border-collapse: collapse; }
+.compat-field-hwr-custom-link th,
+.compat-field-hwr-custom-link td { float: left; clear: both; width: 100%; padding: 0; }
+.compat-field-hwr-custom-link th { padding: 0; line-height: 1.4em; }
+.compat-field-hwr-custom-link input[type='text'] { width: 100%; margin: 0 0 5px; float: left; clear: both; }
+.compat-field-hwr-custom-link .help { margin-bottom: 10px; color: #888; font-size: 11px; font-style: italic; }

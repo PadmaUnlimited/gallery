@@ -1,0 +1,19 @@
+/* uploader css
+*************************************************/
+#wpadminbar,
+#adminmenuback,
+#adminmenuwrap,
+#footer,
+#wpfooter,
+#media-single-form > .submit:first-child,
+#media-single-form td.savesend,
+#contextual-help-link-wrap,
+#update-nag,
+.add-new-h2 { display: none; }
+#wpcontent { margin-left: 0px !important; }
+.wrap { margin: 20px 15px; }
+html.wp-toolbar { padding-top: 0px; }
+
+/* loader */
+.saving-loader { display: block; margin: 40px auto; }
+.saving-loader p { margin: auto; text-indent: -2000px; height: 110px; width: 110px; background-image: url(../images/saving-loader.gif); }

@@ -1,0 +1,7 @@
+/* gallery block specific
+ ********************************************************/
+
+/* all the stuff that has to be hidden */
+.panel-block-type-hwr-gallery p.sub-tab-notice { display: none; }
+
+

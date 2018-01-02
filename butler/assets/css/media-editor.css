@@ -1,0 +1,27 @@
+/* uploader css
+*************************************************/
+#wpadminbar,
+#adminmenuback,
+#adminmenuwrap,
+#footer,
+#wpfooter,
+#media-single-form > .submit:first-child,
+#media-single-form td.savesend,
+#contextual-help-link-wrap,
+#update-nag,
+.add-new-h2,
+#wpbody { display: none; }
+#wpcontent { margin-left: 0px !important }
+.wrap { margin: 20px 15px; }
+html.wp-toolbar { padding-top: 0px; }
+
+/* loader */
+body { position: relative; }
+.btr-media-loader {
+	position: absolute;
+	top: 50%;
+	left:  50%;
+	margin: -30px 0 0 -53px;
+	height: 13px;
+	width: 106px;
+}

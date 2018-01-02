@@ -1,0 +1,922 @@
+/* Hooks
+ ========================================================================== */
+/* Layout */
+/*
+ * Name:			Grid
+ * Description:		Provides a responsive, fluid and nestable grid
+ *
+ * Component:		`uk-grid`
+ *					`uk-width-*`
+ *
+ * Modifiers:		`uk-grid-margin`
+ *
+ *
+ * Used by:			Dropdown
+ *
+ ========================================================================== */
+/* Component
+ ========================================================================== */
+/*
+ * Micro clearfix
+ */
+.uk-grid:before,
+.uk-grid:after {
+  content: " ";
+  display: table;
+}
+.uk-grid:after {
+  clear: both;
+}
+/*
+ * 1. Needed for the gutter
+ * 2. Makes grid more robust so that it can be used with other block elements like lists
+ */
+.uk-grid {
+  /* 1 */
+
+  margin: 0 0 0 -25px;
+  /* 2 */
+
+  padding: 0;
+  list-style: none;
+}
+/*
+ * Vertical gutter
+ */
+.uk-grid + .uk-grid {
+  margin-top: 25px;
+}
+/* Grid column
+ ========================================================================== */
+/*
+ * 1. Makes grid more robust so that it can be used with other block elements
+ * 2. Create horizontal gutter
+ * 3. `float` is set by default so columns always behave the same and create a new block format context
+ */
+.uk-grid > [class*='uk-width-'] {
+  /* 1 */
+
+  margin: 0;
+  /* 2 */
+
+  padding-left: 25px;
+  /* 3 */
+
+  float: left;
+}
+/*
+ * Remove margin from the last-child
+ */
+.uk-grid > [class*='uk-width-'] > :last-child {
+  margin-bottom: 0;
+}
+/* Sub-modifier: `uk-grid-margin`
+ ========================================================================== */
+/*
+ * This class is set by JavaScript and applies a vertical gutter if the columns stack or float into the next row
+ * Higher specificity to override margin
+ */
+.uk-grid > .uk-grid-margin {
+  margin-top: 25px;
+}
+/* Panel in grid
+ ========================================================================== */
+/*
+ * Vertical gutter for panels
+ */
+.uk-grid > [class*='uk-width-'] > .uk-panel + .uk-panel {
+  margin-top: 25px;
+}
+/* Sub-object: `uk-width-*`
+ ========================================================================== */
+[class*='uk-width-'] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+/*
+ * Widths
+ */
+/* Whole */
+.uk-width-1-1 {
+  width: 100%;
+}
+/* Halves */
+.uk-width-1-2,
+.uk-width-2-4,
+.uk-width-3-6,
+.uk-width-5-10 {
+  width: 50%;
+}
+/* Thirds */
+.uk-width-1-3,
+.uk-width-2-6 {
+  width: 33.333%;
+}
+.uk-width-2-3,
+.uk-width-4-6 {
+  width: 66.666%;
+}
+/* Quarters */
+.uk-width-1-4 {
+  width: 25%;
+}
+.uk-width-3-4 {
+  width: 75%;
+}
+/* Fifths */
+.uk-width-1-5,
+.uk-width-2-10 {
+  width: 20%;
+}
+.uk-width-2-5,
+.uk-width-4-10 {
+  width: 40%;
+}
+.uk-width-3-5,
+.uk-width-6-10 {
+  width: 60%;
+}
+.uk-width-4-5,
+.uk-width-8-10 {
+  width: 80%;
+}
+/* Sixths */
+.uk-width-1-6 {
+  width: 16.666%;
+}
+.uk-width-5-6 {
+  width: 83.333%;
+}
+/* Tenths */
+.uk-width-1-10 {
+  width: 10%;
+}
+.uk-width-3-10 {
+  width: 30%;
+}
+.uk-width-7-10 {
+  width: 70%;
+}
+.uk-width-9-10 {
+  width: 90%;
+}
+/* Only tablets and desktop */
+@media (min-width: 768px) {
+  /* Whole */
+  .uk-width-medium-1-1 {
+    width: 100%;
+  }
+  /* Halves */
+  .uk-width-medium-1-2,
+  .uk-width-medium-2-4,
+  .uk-width-medium-3-6,
+  .uk-width-medium-5-10 {
+    width: 50%;
+  }
+  /* Thirds */
+  .uk-width-medium-1-3,
+  .uk-width-medium-2-6 {
+    width: 33.333%;
+  }
+  .uk-width-medium-2-3,
+  .uk-width-medium-4-6 {
+    width: 66.666%;
+  }
+  /* Quarters */
+  .uk-width-medium-1-4 {
+    width: 25%;
+  }
+  .uk-width-medium-3-4 {
+    width: 75%;
+  }
+  /* Fifths */
+  .uk-width-medium-1-5,
+  .uk-width-medium-2-10 {
+    width: 20%;
+  }
+  .uk-width-medium-2-5,
+  .uk-width-medium-4-10 {
+    width: 40%;
+  }
+  .uk-width-medium-3-5,
+  .uk-width-medium-6-10 {
+    width: 60%;
+  }
+  .uk-width-medium-4-5,
+  .uk-width-medium-8-10 {
+    width: 80%;
+  }
+  /* Sixths */
+  .uk-width-medium-1-6 {
+    width: 16.666%;
+  }
+  .uk-width-medium-5-6 {
+    width: 83.333%;
+  }
+  /* Tenths */
+  .uk-width-medium-1-10 {
+    width: 10%;
+  }
+  .uk-width-medium-3-10 {
+    width: 30%;
+  }
+  .uk-width-medium-7-10 {
+    width: 70%;
+  }
+  .uk-width-medium-9-10 {
+    width: 90%;
+  }
+}
+/* Only desktop */
+@media (min-width: 960px) {
+  /* Whole */
+  .uk-width-large-1-1 {
+    width: 100%;
+  }
+  /* Halves */
+  .uk-width-large-1-2,
+  .uk-width-large-2-4,
+  .uk-width-large-3-6,
+  .uk-width-large-5-10 {
+    width: 50%;
+  }
+  /* Thirds */
+  .uk-width-large-1-3,
+  .uk-width-large-2-6 {
+    width: 33.333%;
+  }
+  .uk-width-large-2-3,
+  .uk-width-large-4-6 {
+    width: 66.666%;
+  }
+  /* Quarters */
+  .uk-width-large-1-4 {
+    width: 25%;
+  }
+  .uk-width-large-3-4 {
+    width: 75%;
+  }
+  /* Fifths */
+  .uk-width-large-1-5,
+  .uk-width-large-2-10 {
+    width: 20%;
+  }
+  .uk-width-large-2-5,
+  .uk-width-large-4-10 {
+    width: 40%;
+  }
+  .uk-width-large-3-5,
+  .uk-width-large-6-10 {
+    width: 60%;
+  }
+  .uk-width-large-4-5,
+  .uk-width-large-8-10 {
+    width: 80%;
+  }
+  /* Sixths */
+  .uk-width-large-1-6 {
+    width: 16.666%;
+  }
+  .uk-width-large-5-6 {
+    width: 83.333%;
+  }
+  /* Tenths */
+  .uk-width-large-1-10 {
+    width: 10%;
+  }
+  .uk-width-large-3-10 {
+    width: 30%;
+  }
+  .uk-width-large-7-10 {
+    width: 70%;
+  }
+  .uk-width-large-9-10 {
+    width: 90%;
+  }
+}
+
+
+/* Hooks
+ ========================================================================== */
+/*
+ * Name:			Tab
+ * Description:		Defines styles for a tabbed navigation
+ *
+ * Component:		`uk-tab`
+ *
+ * Modifiers:		``
+ *
+ * States:			`uk-active`
+ *					`uk-disabled`
+ *
+ ========================================================================== */
+/* Component
+ ========================================================================== */
+.uk-tab {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #dddddd;
+}
+/*
+ * Micro clearfix on the deepest container
+ */
+.uk-tab:before,
+.uk-tab:after {
+  content: " ";
+  display: table;
+}
+.uk-tab:after {
+  clear: both;
+}
+/*
+ * Items
+ * 1. Create position context for dropdowns
+ */
+.uk-tab > li {
+  position: relative;
+  /* 1 */
+
+  margin-bottom: -1px;
+  float: left;
+}
+.uk-tab > li > a {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-bottom-width: 0;
+  text-decoration: none;
+}
+.uk-tab > li:nth-child(n+2) > a {
+  margin-left: 5px;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Also apply if dropdown is opened
+ * 3. Remove default focus style
+ */
+.uk-tab > li > a:hover,
+.uk-tab > li > a:focus,
+.uk-tab > li.uk-open > a {
+  /* 2 */
+
+  border-color: #f5f5f5;
+  background: #f5f5f5;
+  outline: none;
+  /* 3 */
+
+}
+.uk-tab > li:not(.uk-active) > a:hover,
+.uk-tab > li:not(.uk-active) > a:focus,
+.uk-tab > li.uk-open:not(.uk-active) > a {
+  margin-bottom: 1px;
+  padding-bottom: 7px;
+}
+/* Active */
+.uk-tab > li.uk-active > a {
+  border-color: #dddddd;
+  border-bottom-color: transparent;
+  background: #ffffff;
+  color: #444444;
+}
+/* Disabled */
+.uk-tab > li.uk-disabled > a {
+  color: #999999;
+  cursor: auto;
+}
+.uk-tab > li.uk-disabled > a:hover,
+.uk-tab > li.uk-disabled > a:focus,
+.uk-tab > li.uk-disabled.uk-active > a {
+  background: none;
+  border-color: transparent;
+}
+
+
+/* Hooks
+ ========================================================================== */
+/*
+ * Name:			Switcher
+ * Description:		Defines styles for the switcher
+ *
+ * Component:		`uk-switcher`
+ *
+ * States:			`uk-active`
+ *
+ ========================================================================== */
+/* Component
+ ========================================================================== */
+.uk-switcher {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*
+ * Items
+ */
+.uk-switcher > *:not(.uk-active) {
+  display: none;
+}
+
+
+/* Hooks
+ ========================================================================== */
+/*
+ * Name:			Progress
+ * Description:		Defines styles for progress bars
+ *
+ * Component: 		`uk-progress`
+ *
+ * Sub-objects: 	`uk-progress-bar`
+ * 
+ * Modifiers:		`uk-progress-mini`
+ *					`uk-progress-small`
+ *					`uk-progress-success`
+ *					`uk-progress-warning`
+ *					`uk-progress-danger`
+ *					`uk-progress-striped`
+ *
+ ========================================================================== */
+/* Component
+ ========================================================================== */
+/*
+ * 1. Clearing
+ * 2. Vertical alignment if text is used
+ */
+.uk-progress {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 20px;
+  margin-bottom: 15px;
+  background: #f5f5f5;
+  overflow: hidden;
+  /* 1 */
+
+  line-height: 20px;
+  /* 2 */
+
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .uk-progress {
+  margin-top: 15px;
+}
+/* Sub-object: `uk-progress-bar`
+ ========================================================================== */
+.uk-progress-bar {
+  width: 0;
+  height: 100%;
+  background: #00a8e6;
+  float: left;
+  /* Transition */
+
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+  /* Allow text */
+
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+/* Size modifiers
+ ========================================================================== */
+/* Mini */
+.uk-progress-mini {
+  height: 6px;
+}
+/* Small */
+.uk-progress-small {
+  height: 12px;
+}
+/* Color modifiers
+ ========================================================================== */
+.uk-progress-success .uk-progress-bar {
+  background-color: #8cc14c;
+}
+.uk-progress-warning .uk-progress-bar {
+  background-color: #faa732;
+}
+.uk-progress-danger .uk-progress-bar {
+  background-color: #da314b;
+}
+/* Modifier: `uk-progress-striped`
+ ========================================================================== */
+.uk-progress-striped .uk-progress-bar {
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+}
+/*
+ * Animation
+ */
+.uk-progress-striped.uk-active .uk-progress-bar {
+  -webkit-animation: uk-progress-bar-stripes 2s linear infinite;
+  animation: uk-progress-bar-stripes 2s linear infinite;
+}
+@-webkit-keyframes uk-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 0;
+  }
+}
+@keyframes uk-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 0;
+  }
+}
+/* Hooks
+ ========================================================================== */
+/*
+ * Name:			Animation
+ * Description:		Provides a useful set of keyframe animations
+ *
+ * Component:		`uk-animation-*`
+ *
+ * Modifiers:		`uk-animation-fade`
+ *					`uk-animation-scale-up`
+ *					`uk-animation-scale-down`
+ *					`uk-animation-slide-top`
+ *					`uk-animation-slide-bottom`
+ *					`uk-animation-slide-left`
+ *					`uk-animation-slide-right`
+ *					`uk-animation-reverse`
+ *
+ * Uses:			Scrollspy
+ *
+ * Used by:			Dropdown
+ *					Icon
+ *					Search
+ *
+ ========================================================================== */
+/* Component
+ ========================================================================== */
+[class*='uk-animation-'] {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* Hide animated element if scrollspy is used */
+[data-uk-scrollspy*='uk-animation-'] {
+  opacity: 0;
+}
+/*
+ * Fade
+ */
+.uk-animation-fade {
+  -webkit-animation-name: uk-fade;
+  animation-name: uk-fade;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+/*
+ * Scale
+ */
+.uk-animation-scale-up {
+  -webkit-animation-name: uk-scale-up;
+  animation-name: uk-scale-up;
+}
+.uk-animation-scale-down {
+  -webkit-animation-name: uk-scale-down;
+  animation-name: uk-scale-down;
+}
+/*
+ * Slide
+ */
+.uk-animation-slide-top {
+  -webkit-animation-name: uk-slide-top;
+  animation-name: uk-slide-top;
+}
+.uk-animation-slide-bottom {
+  -webkit-animation-name: uk-slide-bottom;
+  animation-name: uk-slide-bottom;
+}
+.uk-animation-slide-left {
+  -webkit-animation-name: uk-slide-left;
+  animation-name: uk-slide-left;
+}
+.uk-animation-slide-right {
+  -webkit-animation-name: uk-slide-right;
+  animation-name: uk-slide-right;
+}
+/*
+ * Shake
+ */
+.uk-animation-shake {
+  -webkit-animation-name: uk-shake;
+  animation-name: uk-shake;
+}
+/* Modifiers
+ ========================================================================== */
+.uk-animation-reverse {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+/* Keyframes
+ ========================================================================== */
+/*
+ * Fade
+ */
+@-webkit-keyframes uk-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes uk-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+ * Scale up
+ */
+@-webkit-keyframes uk-scale-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes uk-scale-up {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*
+ * Scale down
+ */
+@-webkit-keyframes uk-scale-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes uk-scale-down {
+  0% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*
+ * Slide top
+ */
+@-webkit-keyframes uk-slide-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes uk-slide-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*
+ * Slide bottom
+ */
+@-webkit-keyframes uk-slide-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes uk-slide-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*
+ * Slide left
+ */
+@-webkit-keyframes uk-slide-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes uk-slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*
+ * Slide right
+ */
+@-webkit-keyframes uk-slide-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes uk-slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*
+ * Shake
+ */
+@-webkit-keyframes uk-shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-9px);
+  }
+  20% {
+    -webkit-transform: translateX(8px);
+  }
+  30% {
+    -webkit-transform: translateX(-7px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-5px);
+  }
+  60% {
+    -webkit-transform: translateX(4px);
+  }
+  70% {
+    -webkit-transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+  }
+  90% {
+    -webkit-transform: translateX(-1px);
+  }
+}
+@keyframes uk-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-9px);
+  }
+  20% {
+    transform: translateX(8px);
+  }
+  30% {
+    transform: translateX(-7px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  60% {
+    transform: translateX(4px);
+  }
+  70% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  90% {
+    transform: translateX(-1px);
+  }
+}
+/*
+ * Slide top fixed
+ */
+@-webkit-keyframes uk-slide-top-fixed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes uk-slide-top-fixed {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*
+ * Slide bottom fixed
+ */
+@-webkit-keyframes uk-slide-bottom-fixed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes uk-slide-bottom-fixed {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*
+ * Spin
+ */
+@-webkit-keyframes uk-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes uk-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
