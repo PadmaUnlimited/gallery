@@ -1,6 +1,6 @@
 <?php
 
-class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {	
+class PadmaGalleryBlockOptions extends PadmaBlockOptionsAPI {	
 	
 	public $tabs 		     = array();
 	public $inputs 		     = array();
@@ -62,7 +62,7 @@ class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {
 				if ( !isset($options['default']) )
 					$options['default'] = '';
 				
-				$get_hw_setting = HeadwayHwrGalleryBlock::get_setting($block, $options['name'], $options['default']);
+				$get_hw_setting = PadmaGalleryBlock::get_setting($block, $options['name'], $options['default']);
 				
 				if ( $options['type'] == 'wysiwyg' )
 					$settings[$options['name']] = html_entity_decode($get_hw_setting, ENT_QUOTES, 'UTF-8');
@@ -81,7 +81,7 @@ class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {
 
 	function modify_arguments($args = false) {
 
-		$block = HeadwayBlocksData::get_block($args['block_id']);		
+		$block = PadmaBlocksData::get_block($args['block_id']);		
 		
 		/* we add the notices to each tabs */
 		$inputs = self::get_all_inputs($block);
@@ -105,16 +105,16 @@ class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {
 		$this->inputs = $inputs;
 				
 		$js_callback = '
-			hwr.blockOptionsApi.loadStyle( "' . HWR_GALLERY_URL . 'admin/css/admin.css" );
-			hwr.blockOptionsApi.loadScript( "' . HWR_GALLERY_URL . 'admin/js/admin.js", function() {
+			pur.blockOptionsApi.loadStyle( "' . PADMA_GALLERY_URL . 'admin/css/admin.css" );
+			pur.blockOptionsApi.loadScript( "' . PADMA_GALLERY_URL . 'admin/js/admin.js", function() {
 
-				hwr_gallery_js("' . $args['block_id'] . '");
-				hwr.blockOptionsApi.updateOptions("hwr_gallery_js", "' . $args['block_id'] . '");
+				padma_gallery_js("' . $args['block_id'] . '");
+				pur.blockOptionsApi.updateOptions("padma_gallery_js", "' . $args['block_id'] . '");
 
 			} );
 		';
 
-		$this->open_js_callback = hwr_load_block_options_assets( $args['block_id'], $js_callback );
+		$this->open_js_callback = padma_load_block_options_assets( $args['block_id'], $js_callback );
 
 	}
 	
@@ -124,7 +124,7 @@ class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {
 		return array(
 			'name' => $id,
 			'type' => 'raw-html',
-			'html' => '<div class="hwr-admin-notice"><a href="#" class="hwr-close">x</a><p class="show-once"></p></div>'
+			'html' => '<div class="pur-admin-notice"><a href="#" class="pur-close">x</a><p class="show-once"></p></div>'
 		);
 				
 	}
@@ -135,7 +135,7 @@ class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {
 		return array(
 			'name' => $id,
 			'type' => 'raw-html',
-			'html' => '<h3 class="hwr-admin-header">' . $label . '</h3>'
+			'html' => '<h3 class="pur-admin-header">' . $label . '</h3>'
 		);
 			
 			
@@ -164,9 +164,9 @@ class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {
 	
 		global $post;
 		
-		$page_info = HeadwayGalleryBlockDisplay::page_info($block);
+		$page_info = PadmaGalleryBlockDisplay::page_info($block);
 		
-		if (  $page_info['page-type'] == 'hwr_gallery' )
+		if (  $page_info['page-type'] == 'padma_gallery' )
 			$ablum_hide = array(
 				'#sub-tab-media',
 				'#input-readon-text', 
@@ -1201,7 +1201,7 @@ class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {
 		
 		$args = array(
 		    'posts_per_page' => -1,
-		    'post_type' => 'hwr_gallery',
+		    'post_type' => 'padma_gallery',
 		    'post_status' => 'publish',
 		    'suppress_filters' => true );
 		    
@@ -1440,7 +1440,7 @@ class HeadwayHwrGalleryBlockOptions extends HeadwayBlockOptionsAPI {
 	
 	public static function content($block) {
 	
-		$wysiwyg = version_compare('3.2.5', HEADWAY_VERSION, '>') ? 'textarea' : 'wysiwyg';
+		$wysiwyg = version_compare('3.2.5', PADMA_VERSION, '>') ? 'textarea' : 'wysiwyg';
 
 		$settings = array(
 			'open-wrap-block-before' => self::wrapper('block-before', true),

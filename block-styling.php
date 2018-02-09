@@ -1,12 +1,12 @@
 <?php
 
-class HeadwayGalleryBlockStyling {
+class PadmaGalleryBlockStyling {
 
 	public static function hooks() {
 	
-		if ( version_compare(HEADWAY_VERSION, '3.6', '<') ) {
+		if ( version_compare(PADMA_VERSION, '3.6', '<') ) {
 						
-			return hwr_gallery_depreciate_hooks();
+			return padma_gallery_depreciate_hooks();
 		
 		}
 			
@@ -15,87 +15,87 @@ class HeadwayGalleryBlockStyling {
 			array(
 				'id' => 'all-views',
 				'name' => 'All Views',
-				'selector' => '.block-type-hwr-gallery',
+				'selector' => '.block-type-padma-gallery',
 				'properties' => array('')
 			),
 				array(
 					'id' => 'block-container',
 					'name' => 'Container',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery',
+					'selector' => '.block-type-padma-gallery .padma-gallery',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 					'parent' => 'all-views'
 				),
 				array(
 					'id' => 'block-before-',
 					'name' => 'Before Block',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .hwr-block-before',
+					'selector' => '.block-type-padma-gallery .padma-gallery .pur-block-before',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 					'parent' => 'all-views'
 				),
 				array(
 					'id' => 'block-title',
 					'name' => 'Title',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .hwr-block-title',
+					'selector' => '.block-type-padma-gallery .padma-gallery .pur-block-title',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow'),
 					'parent' => 'all-views'
 				),
 					array(
 						'id' => 'block-title-alt',
 						'name' => 'Alt',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .hwr-block-title span',
+						'selector' => '.block-type-padma-gallery .padma-gallery .pur-block-title span',
 						'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow'),
 						'parent' => 'block-title'
 					),
 				array(
 					'id' => 'block-content',
 					'name' => 'Description',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .hwr-block-content',
+					'selector' => '.block-type-padma-gallery .padma-gallery .pur-block-content',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow'),
 					'parent' => 'all-views'
 				),
 				array(
 					'id' => 'block-footer',
 					'name' => 'Footer',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .hwr-block-footer',
+					'selector' => '.block-type-padma-gallery .padma-gallery .pur-block-footer',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow'),
 					'parent' => 'all-views'
 				),
 				array(
 					'id' => 'block-after',
 					'name' => 'After Block',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .hwr-block-after',
+					'selector' => '.block-type-padma-gallery .padma-gallery .pur-block-after',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 					'parent' => 'all-views'
 				),
 				array(
 					'id' => 'items-container',
 					'name' => 'Items Container',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .hwr-album',
+					'selector' => '.block-type-padma-gallery .padma-gallery .pur-album',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 					'parent' => 'all-views'
 				),
 				array(
 					'id' => 'readon-link',
 					'name' => 'Readon Link',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .readon-link a',
+					'selector' => '.block-type-padma-gallery .padma-gallery .readon-link a',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow'),
 					'states' => array(
-						'hover' => '.block-type-hwr-gallery .hwr-gallery .readon-link a:hover', 
-						'active' => '.block-type-hwr-gallery .hwr-gallery .readon-link a:active'
+						'hover' => '.block-type-padma-gallery .padma-gallery .readon-link a:hover', 
+						'active' => '.block-type-padma-gallery .padma-gallery .readon-link a:active'
 					),
 					'parent' => 'all-views'
 				),
 				array(
 					'id' => 'image-container',
 					'name' => 'Image',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .item, .block-type-hwr-gallery .hwr-gallery .slider-item',
+					'selector' => '.block-type-padma-gallery .padma-gallery .item, .block-type-padma-gallery .padma-gallery .slider-item',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'padding', 'nudging', 'overflow', 'text-shadow'),
 					'parent' => 'all-views'
 				),
 					array(
 						'id' => 'image-wrap',
 						'name' => 'Wrap',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .image-wrap',
+						'selector' => '.block-type-padma-gallery .padma-gallery .image-wrap',
 						'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'padding', 'nudging', 'overflow', 'text-shadow'),
 						'parent' => 'image-container'
 					),
@@ -103,56 +103,56 @@ class HeadwayGalleryBlockStyling {
 					array(
 						'id' => 'image-title',
 						'name' => 'Title',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .image-title',
+						'selector' => '.block-type-padma-gallery .padma-gallery .image-title',
 						'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'text-shadow'),
 						'parent' => 'image-container'
 					),
 						array(
 							'id' => 'image-title-count',
 							'name' => 'Count',
-							'selector' => '.block-type-hwr-gallery .hwr-gallery .image-title .album-count',
+							'selector' => '.block-type-padma-gallery .padma-gallery .image-title .album-count',
 							'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'text-shadow'),
 							'parent' => 'image-title'
 						),
 					array(
 						'id' => 'image-description',
 						'name' => 'Description',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .image-description',
+						'selector' => '.block-type-padma-gallery .padma-gallery .image-description',
 						'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 						'parent' => 'image-container'
 					),
 				array(
 					'id' => 'overlay',
 					'name' => 'Overlay',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery [class^="overlay"]',
+					'selector' => '.block-type-padma-gallery .padma-gallery [class^="overlay"]',
 					'properties' => array(''),
 					'parent' => 'all-views'
 				),
 					array(
 						'id' => 'overlay-container',
 						'name' => 'Container',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .overlay-wrap',
+						'selector' => '.block-type-padma-gallery .padma-gallery .overlay-wrap',
 						'properties' => array('background', 'borders', 'rounded-corners', 'box-shadow'),
 						'parent' => 'overlay'
 					),
 					array(
 						'id' => 'overlay-title',
 						'name' => 'Title',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .overlay-title',
+						'selector' => '.block-type-padma-gallery .padma-gallery .overlay-title',
 						'properties' => array('fonts', 'padding', 'text-shadow'),
 						'parent' => 'overlay'
 					),
 					array(
 						'id' => 'overlay-caption',
 						'name' => 'Caption',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .overlay-caption',
+						'selector' => '.block-type-padma-gallery .padma-gallery .overlay-caption',
 						'properties' => array('fonts', 'padding', 'text-shadow'),
 						'parent' => 'overlay'
 					),
 					array(
 						'id' => 'overlay-image',
 						'name' => 'Image',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .overlay-image',
+						'selector' => '.block-type-padma-gallery .padma-gallery .overlay-image',
 						'properties' => array('background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging'),
 						'parent' => 'overlay'
 					),
@@ -160,52 +160,52 @@ class HeadwayGalleryBlockStyling {
 			array(
 				'id' => 'album-view',
 				'name' => 'Album View',
-				'selector' => '.block-type-hwr-gallery .hwr-gallery [class^="album"]',
+				'selector' => '.block-type-padma-gallery .padma-gallery [class^="album"]',
 				'properties' => array('')
 			),
 				array(
 					'id' => 'album-content-wrap',
 					'name' => 'Album Content',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .album-content-wrap',
+					'selector' => '.block-type-padma-gallery .padma-gallery .album-content-wrap',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 					'parent' => 'album-view'
 				),
 				array(
 					'id' => 'album-title',
 					'name' => 'Album Title',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .album-title',
+					'selector' => '.block-type-padma-gallery .padma-gallery .album-title',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 					'parent' => 'album-view'
 				),
 				array(
 					'id' => 'album-description',
 					'name' => 'Album Description',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .album-description',
+					'selector' => '.block-type-padma-gallery .padma-gallery .album-description',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 					'parent' => 'album-view'
 				),
 				array(
 					'id' => 'slider',
 					'name' => 'Slider Layout',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery [class^="pager"]',
+					'selector' => '.block-type-padma-gallery .padma-gallery [class^="pager"]',
 					'properties' => array(''),
 					'parent' => 'album-view'
 				),
 					array(
 						'id' => 'pagination-container',
 						'name' => 'Pagination Container',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .pager',
+						'selector' => '.block-type-padma-gallery .padma-gallery .pager',
 						'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow'),
 						'parent' => 'slider'
 					),
 					array(
 						'id' => 'pagination-thumb',
 						'name' => 'Pagination Thumbnails',
-						'selector' => '.block-type-hwr-gallery .hwr-gallery .pager-item',
+						'selector' => '.block-type-padma-gallery .padma-gallery .pager-item',
 						'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'padding', 'nudging', 'overflow', 'text-shadow'),
 						'states' => array(
-							'hover' => '.block-type-hwr-gallery .hwr-gallery .pager-item:hover', 
-							'active' => '.block-type-hwr-gallery .hwr-gallery .hwr-active-slide .pager-item, .block-type-hwr-gallery .hwr-gallery .pager-item.hwr-active'
+							'hover' => '.block-type-padma-gallery .padma-gallery .pager-item:hover', 
+							'active' => '.block-type-padma-gallery .padma-gallery .pur-active-slide .pager-item, .block-type-padma-gallery .padma-gallery .pager-item.pur-active'
 						),
 						'parent' => 'slider'
 					),
@@ -213,31 +213,31 @@ class HeadwayGalleryBlockStyling {
 			array(
 				'id' => 'media-view',
 				'name' => 'Media View',
-				'selector' => '.block-type-hwr-gallery .hwr-gallery .media-view',
+				'selector' => '.block-type-padma-gallery .padma-gallery .media-view',
 				'properties' => array('')
 			),
 				array(
 					'id' => 'media-image-title',
 					'name' => 'Image Title',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .media-view .image-title',
+					'selector' => '.block-type-padma-gallery .padma-gallery .media-view .image-title',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'text-shadow'),
 					'parent' => 'media-view'
 				),
 				array(
 					'id' => 'media-image-description',
 					'name' => 'Image Description',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .media-view .image-description',
+					'selector' => '.block-type-padma-gallery .padma-gallery .media-view .image-description',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'text-shadow'),
 					'parent' => 'media-view'
 				),
 				array(
 					'id' => 'image-nav-btn',
 					'name' => 'Next &amp; Previous',
-					'selector' => '.block-type-hwr-gallery .hwr-gallery .image-nav a',
+					'selector' => '.block-type-padma-gallery .padma-gallery .image-nav a',
 					'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow'),
 					'states' => array(
-						'hover' => '.block-type-hwr-gallery .hwr-gallery .image-nav a:hover', 
-						'active' => '.block-type-hwr-gallery .hwr-gallery .image-nav a:active'
+						'hover' => '.block-type-padma-gallery .padma-gallery .image-nav a:hover', 
+						'active' => '.block-type-padma-gallery .padma-gallery .image-nav a:active'
 					),
 					'parent' => 'media-view'
 				)
@@ -249,7 +249,7 @@ class HeadwayGalleryBlockStyling {
 	public static function defaults() {
 		
 		return array(
-			'block-hwr-gallery-block-container' => array(
+			'block-padma-gallery-block-container' => array(
 				'properties' => array(
 					'padding-top' => '20',
 					'padding-right' => '0',
@@ -257,7 +257,7 @@ class HeadwayGalleryBlockStyling {
 					'padding-left' => '0'
 				)
 			),
-			'block-hwr-gallery-block-title' => array(
+			'block-padma-gallery-block-title' => array(
 				'properties' => array(
 					'margin-top' => '0',
 					'margin-bottom' => '10',
@@ -265,12 +265,12 @@ class HeadwayGalleryBlockStyling {
 					'color' => '555555'
 				)
 			),
-			'block-hwr-gallery-block-title-alt' => array(
+			'block-padma-gallery-block-title-alt' => array(
 				'properties' => array(
 					'color' => '666666'
 				)
 			),
-			'block-hwr-gallery-block-content' => array(
+			'block-padma-gallery-block-content' => array(
 				'properties' => array(
 					'margin-bottom' => '20',
 					'font-size' => '19',
@@ -278,12 +278,12 @@ class HeadwayGalleryBlockStyling {
 					'line-height' => '160',
 				)
 			),
-			'block-hwr-gallery-items-container' => array(
+			'block-padma-gallery-items-container' => array(
 				'properties' => array(
 					'margin-bottom' => '20',
 				)
 			),
-			'block-hwr-gallery-album-title' => array(
+			'block-padma-gallery-album-title' => array(
 				'properties' => array(
 					'margin-bottom' => '10',
 					'font-size' => '30',
@@ -291,12 +291,12 @@ class HeadwayGalleryBlockStyling {
 					'font-styling' => 'normal'
 				)
 			),
-			'block-hwr-gallery-album-description' => array(
+			'block-padma-gallery-album-description' => array(
 				'properties' => array(
 					'font-size' => '15'
 				)
 			),
-			'block-hwr-gallery-pagination-container' => array(
+			'block-padma-gallery-pagination-container' => array(
 				'properties' => array(
 					'margin-top' => '20',
 					'margin-bottom' => '3',
@@ -304,7 +304,7 @@ class HeadwayGalleryBlockStyling {
 					'padding-left' => '40',
 				)
 			),
-			'block-hwr-gallery-pagination-thumb' => array(
+			'block-padma-gallery-pagination-thumb' => array(
 				'properties' => array(
 					'padding-top' => '1',
 					'padding-right' => '1',
@@ -334,7 +334,7 @@ class HeadwayGalleryBlockStyling {
 					)
 				)
 			),
-			'block-hwr-gallery-image-title' => array(
+			'block-padma-gallery-image-title' => array(
 				'properties' => array(
 					'background-color' => '#eeeeee',
 					'margin-top' => '1',
@@ -351,7 +351,7 @@ class HeadwayGalleryBlockStyling {
 					'font-styling' => 'normal'
 				)
 			),
-			'block-hwr-gallery-media-image-title' => array(
+			'block-padma-gallery-media-image-title' => array(
 				'properties' => array(
 					'background-color' => 'transparent',
 					'margin-top' => '0',
@@ -367,14 +367,14 @@ class HeadwayGalleryBlockStyling {
 					'font-styling' => 'normal'
 				)
 			),
-			'block-hwr-gallery-media-image-description' => array(
+			'block-padma-gallery-media-image-description' => array(
 				'properties' => array(
 					'margin-bottom' => '15',
 					'line-height' => '140',
 					'font-styling' => 'normal'
 				)
 			),
-			'block-hwr-gallery-image-title-count' => array(
+			'block-padma-gallery-image-title-count' => array(
 				'properties' => array(
 					'color' => '#888888',
 					'margin-right' => '0',
@@ -382,7 +382,7 @@ class HeadwayGalleryBlockStyling {
 					'font-styling' => 'normal'
 				)
 			),
-			'block-hwr-gallery-image-nav-btn' => array(
+			'block-padma-gallery-image-nav-btn' => array(
 				'properties' => array(
 					'background-color' => '#e6e6e6',
 					'padding-top' => '4',
@@ -406,12 +406,12 @@ class HeadwayGalleryBlockStyling {
 					)
 				)
 			),
-			'block-hwr-gallery-overlay-container' => array(
+			'block-padma-gallery-overlay-container' => array(
 				'properties' => array(
 					'background-color' => 'rgba(0,0,0,0.6)',
 				)
 			),
-			'block-hwr-gallery-overlay-title' => array(
+			'block-padma-gallery-overlay-title' => array(
 				'properties' => array(
 					'color' => '#f2f2f2',
 					'padding-top' => '5',
@@ -422,7 +422,7 @@ class HeadwayGalleryBlockStyling {
 					'font-styling' => 'bold'
 				)
 			),
-			'block-hwr-gallery-overlay-caption' => array(
+			'block-padma-gallery-overlay-caption' => array(
 				'properties' => array(
 					'color' => '#f2f2f2',
 					'padding-top' => '5',
@@ -432,14 +432,14 @@ class HeadwayGalleryBlockStyling {
 					'line-height' => '140'
 				)
 			),
-			'block-hwr-gallery-overlay-image' => array(
+			'block-padma-gallery-overlay-image' => array(
 				'properties' => array(
-					'background-image' => HWR_GALLERY_URL . 'assets/images/magnet.png',
+					'background-image' => PADMA_GALLERY_URL . 'assets/images/magnet.png',
 					'background-repeat' => 'no-repeat',
 					'background-position' => 'center center'
 				)
 			),
-			'block-hwr-gallery-image-description' => array(
+			'block-padma-gallery-image-description' => array(
 				'properties' => array(
 					'margin-top' => '5',
 					'margin-right' => '0',
@@ -448,7 +448,7 @@ class HeadwayGalleryBlockStyling {
 					'line-height' => '140'
 				)
 			),
-			'block-hwr-gallery-readon-link' => array(
+			'block-padma-gallery-readon-link' => array(
 				'properties' => array(
 					'background-color' => '#e6e6e6',
 					'padding-top' => '4',

@@ -1,0 +1,31 @@
+/* icon font
+*********************************************/
+@font-face {
+	font-family: 'headwayrocket';
+	src:url('../fonts/headwayrocket.eot?389a44');
+	src:url('../fonts/headwayrocket.eot?#iefix389a44') format('embedded-opentype'),
+		url('../fonts/headwayrocket.woff?389a44') format('woff'),
+		url('../fonts/headwayrocket.ttf?389a44') format('truetype'),
+		url('../fonts/headwayrocket.svg?389a44#headwayrocket') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html body [class*="pur-icon-"] {
+	position: relative;
+}
+html body [class*="pur-icon-"]:before {
+	font-family: 'headwayrocket'!important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+html body [class*="pur-icon-rocket"]:before {
+	content: "\e600";
+}
+html body [class*="pur-icon-close"]:before {
+	content: "\e601";
+}

@@ -1,0 +1,99 @@
+/* admin header */
+.pur-admin-header {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    clear: both;
+    margin: 20px 0 10px;
+    padding: 10px;
+    font-size: 12px;
+    color: #777;
+    width: 100%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h3.pur-admin-header:first-of-type {
+    margin-top: 3px;
+}
+
+/* admin notice */
+.panel .pur-admin-notice {
+    display: none;
+    font-size: 13px;
+    line-height: 23px;
+    position: absolute;
+    z-index: 99999;
+    opacity: .95;
+    width: 400px;
+    right: 15px;
+    top: 65px;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #FFF;
+    border-left: 4px solid #FFBA00;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.pur-admin-notice a.pur-close {
+    position: absolute;
+    width: auto;
+    right: 5px;
+    top: 4px;
+    padding: 2px 6px 4px;
+    line-height: 100%;
+    color: #333;
+    background: #ddd;
+    -webkit-box-shadow: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.pur-admin-notice a.pur-close:hover, .pur-admin-notice a.pur-close:focus {
+    background: #ccc;
+}
+.pur-admin-notice a.pur-close:active {
+    margin-top: 1px;
+}
+
+/* admin btn generic */
+a.pur-admin-btn {
+    text-decoration: none;
+    font-size: 12px;
+    height: 21px;
+    line-height: 20px;
+    padding: 0 8px 1px;
+    margin: 0;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-radius: 3px;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #555;
+    border-color: #ccc;
+    background: #f7f7f7;
+    -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 0 rgba(0, 0, 0, .08);
+    box-shadow: inset 0 1px 0 #fff, 0 1px 0 rgba(0, 0, 0, .08);
+    vertical-align: top;
+}
+a.pur-admin-btn:hover, a.pur-admin-btn:focus {
+    background: #fafafa;
+    border-color: #999;
+    color: #222;
+}
+a.pur-admin-btn:active {
+    background: #eee;
+    border-color: #999;
+    color: #333;
+    -webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, .5);
+    box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, .5);
+    outline: 0;
+}

@@ -11,7 +11,7 @@ jQuery.noConflict();
 		
 		
 		/* we append the hidden input which will pass the value went the media is edited */
-		$('#media-single-form').append('<input type="hidden" name="hwr_action" value="done_editing" />');
+		$('#media-single-form').append('<input type="hidden" name="padma_action" value="done_editing" />');
 		
 		
 		/* we go a bit fancy and add a spinner on click */

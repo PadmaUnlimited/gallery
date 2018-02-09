@@ -1,14 +1,14 @@
 /* post type icon */
-#menu-posts-hwr_gallery .wp-menu-image { background: none; background-image: url(../images/wp-icon-sprite.png); background-position: 7px -125px !important; background-repeat: no-repeat; }
-#menu-posts-hwr_gallery .wp-menu-image img { display: none; }
-#menu-posts-hwr_gallery:hover .wp-menu-image { background-position: 7px -157px !important; }
-#menu-posts-hwr_gallery.wp-menu-open .wp-menu-image { background-position: 7px -157px !important; }
-#icon-edit.icon32-posts-hwr_gallery { background: transparent url(../images/wp-icon-sprite.png) no-repeat 7px 7px; }
+#menu-posts-padma_gallery .wp-menu-image { background: none; background-image: url(../images/wp-icon-sprite.png); background-position: 7px -125px !important; background-repeat: no-repeat; }
+#menu-posts-padma_gallery .wp-menu-image img { display: none; }
+#menu-posts-padma_gallery:hover .wp-menu-image { background-position: 7px -157px !important; }
+#menu-posts-padma_gallery.wp-menu-open .wp-menu-image { background-position: 7px -157px !important; }
+#icon-edit.icon32-posts-padma_gallery { background: transparent url(../images/wp-icon-sprite.png) no-repeat 7px 7px; }
 
 /* used for device and retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
-	#menu-posts-hwr_gallery .wp-menu-image { background-image: url(../images/wp-icon-sprite@x2.png); background-size: 32px 187px; background-position: 7px -132px !important; }
-	#menu-posts-hwr_gallery:hover .wp-menu-image { background-position: 8px -167px !important; }
-	#menu-posts-hwr_gallery.wp-menu-open .wp-menu-image { background-position: 7px -167px !important; }
-	#icon-edit.icon32-posts-hwr_gallery { background-image: url(../images/wp-icon-sprite@x2.png); background-size: 27px 187px; }
+	#menu-posts-padma_gallery .wp-menu-image { background-image: url(../images/wp-icon-sprite@x2.png); background-size: 32px 187px; background-position: 7px -132px !important; }
+	#menu-posts-padma_gallery:hover .wp-menu-image { background-position: 8px -167px !important; }
+	#menu-posts-padma_gallery.wp-menu-open .wp-menu-image { background-position: 7px -167px !important; }
+	#icon-edit.icon32-posts-padma_gallery { background-image: url(../images/wp-icon-sprite@x2.png); background-size: 27px 187px; }
 }

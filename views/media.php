@@ -31,7 +31,7 @@ if ( !empty($uploaded_to) ) {
 }
 
 /* we create the image output */
-echo '<div class="hwr-album clear">'; 
+echo '<div class="pur-album clear">'; 
 	
 	/* grid params */
 	$params = array(

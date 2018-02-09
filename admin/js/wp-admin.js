@@ -3,14 +3,14 @@ jQuery.noConflict();
 	jQuery(document).ready(function($){
 
 		var media_iframe;
-		var gallery 	    = '.hwr-gallery-options';
-		var thumb 		    = '.hwr-thumbnail';
-		var thumbs 		    = '.hwr-thumbnails';
-		var thumb_toolbar   = '.hwr-thumbnail-toolbar';
+		var gallery 	    = '.pur-gallery-options';
+		var thumb 		    = '.pur-thumbnail';
+		var thumbs 		    = '.pur-thumbnails';
+		var thumb_toolbar   = '.pur-thumbnail-toolbar';
 		var ui_sortable     = '.ui-sortable';
 		var thickbox_height = ($(window).height() * 90) / 100;
 
-		$('.hwr-upload-image').live('click', function( event ){
+		$('.pur-upload-image').live('click', function( event ){
 
 		  event.preventDefault();
 
@@ -56,14 +56,14 @@ jQuery.noConflict();
 					    	src : attachment_url
 				    	};
 
-						var tmpl = '<div class="hwr-thumbnail"><input class="hwr-image-value" type="hidden" name="hwr_gallery_image[]" value="' + attachment.id + '" /><div class="hwr-image-wrap"><img src="' + image.src + '" /></div><div class="hwr-thumbnail-toolbar"><ul><li><a href="#" class="hwr-drag hwr-btn">Drag</a></li><li><a href="#" class="hwr-edit hwr-btn">Edit</a></li><li><a href="#" class="hwr-remove hwr-btn">Remove</a></li></ul></div></div>';
+						var tmpl = '<div class="pur-thumbnail"><input class="pur-image-value" type="hidden" name="padma_gallery_image[]" value="' + attachment.id + '" /><div class="pur-image-wrap"><img src="' + image.src + '" /></div><div class="pur-thumbnail-toolbar"><ul><li><a href="#" class="pur-drag pur-btn">Drag</a></li><li><a href="#" class="pur-edit pur-btn">Edit</a></li><li><a href="#" class="pur-remove pur-btn">Remove</a></li></ul></div></div>';
 
 						$(tmpl).appendTo(thumbs)
 							.hide()
 							.fadeIn('slow')
 							.css({
-								"height" : $('.hwr-thumbnails').data('thumb-h') + "px",
-								"width" : $('.hwr-thumbnails').data('thumb-w') + "px"
+								"height" : $('.pur-thumbnails').data('thumb-h') + "px",
+								"width" : $('.pur-thumbnails').data('thumb-w') + "px"
 							});
 
 				    });
@@ -89,18 +89,18 @@ jQuery.noConflict();
 
 			var thumb_count = ( thumb_count == 0) ? 'no image' : thumb_count;
 
-			$(gallery).find('#hwr_gallery_count').attr( 'value', thumb_count );
-			$(gallery).find('.hwr-thumbnail-count span').text( thumb_count );
+			$(gallery).find('#padma_gallery_count').attr( 'value', thumb_count );
+			$(gallery).find('.pur-thumbnail-count span').text( thumb_count );
 
 			if (thumb_count == 'no image') {
 
-				$('.hwr-no-thumbnail').show();
-				$('.hwr-gallery-options .drag-notice').fadeOut();
+				$('.pur-no-thumbnail').show();
+				$('.pur-gallery-options .drag-notice').fadeOut();
 
 			} else {
 
-				$('.hwr-no-thumbnail').hide();
-				$('.hwr-gallery-options .drag-notice').fadeIn();
+				$('.pur-no-thumbnail').hide();
+				$('.pur-gallery-options .drag-notice').fadeIn();
 
 			}
 
@@ -120,11 +120,11 @@ jQuery.noConflict();
 
 
 		/* we remove the thumbnail and update the count when removed link is clicked */
-		$(thumb_toolbar).find('.hwr-remove').live('click', function(event ){
+		$(thumb_toolbar).find('.pur-remove').live('click', function(event ){
 
 			event.preventDefault();
 
-			$(this).closest(thumb).find('.hwr-image-value').attr( 'value', '' );
+			$(this).closest(thumb).find('.pur-image-value').attr( 'value', '' );
 
 			$(this).closest(thumb).fadeOut( function(){
 
@@ -139,13 +139,13 @@ jQuery.noConflict();
 
 
 		/* we fire the edit iframe when edit link is clicked */
-		$(thumb_toolbar).find('.hwr-edit').live('click', function( event ){
+		$(thumb_toolbar).find('.pur-edit').live('click', function( event ){
 
 			event.preventDefault();
 
-			id = $(this).closest(thumb).find('.hwr-image-value').attr( 'value');
+			id = $(this).closest(thumb).find('.pur-image-value').attr( 'value');
 
-			tb_show( 'Edit image' , hwr_admin_url + 'media.php?attachment_id=' + id + '&action=edit&hwr_media_editor=true&hwr_action=done_editing&type=image&TB_iframe=1&height=' + thickbox_height);
+			tb_show( 'Edit image' , padma_admin_url + 'media.php?attachment_id=' + id + '&action=edit&padma_media_editor=true&padma_action=done_editing&type=image&TB_iframe=1&height=' + thickbox_height);
 
 		 });
 
@@ -155,8 +155,8 @@ jQuery.noConflict();
 
 		  	$(ui_sortable).sortable({
 
-		  	    handle: '.hwr-drag.hwr-btn',
-				placeholder: "hwr-state-highlight",
+		  	    handle: '.pur-drag.pur-btn',
+				placeholder: "pur-state-highlight",
 				cursor: 'move',
 				start: function(e, ui ){
 					ui.placeholder.height($(thumb).outerHeight() - 6);

@@ -5,14 +5,14 @@ th.column-title  { width: 20%; }
 th.column-images { width: 30%; }
 td.column-images { width: 30%; }
 
-.type-hwr_gallery .nbr-images { float:left;  }
-.type-hwr_gallery .thumbnail-wrap { width: 40px; height: 40px; float:left; padding: 2px; margin-right: 5px; border: 1px solid #ddd; background-color: #fff; overflow: hidden; position: relative; }
-.type-hwr_gallery .thumbnail,
-.type-hwr_gallery .thumbnail img { position: absolute; left: 0; top: 0; }
-.type-hwr_gallery .thumbnail { width: 100%; height: 100%; }
-.type-hwr_gallery .thumbnail img { position: absolute; left: 0; top: 0; max-height: 100px; max-width: 100px; }
+.type-padma_gallery .nbr-images { float:left;  }
+.type-padma_gallery .thumbnail-wrap { width: 40px; height: 40px; float:left; padding: 2px; margin-right: 5px; border: 1px solid #ddd; background-color: #fff; overflow: hidden; position: relative; }
+.type-padma_gallery .thumbnail,
+.type-padma_gallery .thumbnail img { position: absolute; left: 0; top: 0; }
+.type-padma_gallery .thumbnail { width: 100%; height: 100%; }
+.type-padma_gallery .thumbnail img { position: absolute; left: 0; top: 0; max-height: 100px; max-width: 100px; }
 
 /* Cross browser
 *************************************************/
-.type-hwr_gallery .thumbnail { -webkit-transform: translate(50%,50%); -moz-transform: translate(50%,50%); -ms-transform: translate(50%,50%); -o-transform: translate(50%,50%);transform: translate(50%,50%); }
-.type-hwr_gallery .thumbnail img { -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -o-transform: translate(-50%,-50%);transform: translate(-50%,-50%); }
+.type-padma_gallery .thumbnail { -webkit-transform: translate(50%,50%); -moz-transform: translate(50%,50%); -ms-transform: translate(50%,50%); -o-transform: translate(50%,50%);transform: translate(50%,50%); }
+.type-padma_gallery .thumbnail img { -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -o-transform: translate(-50%,-50%);transform: translate(-50%,-50%); }

@@ -11,7 +11,7 @@ while ( $this->query->have_posts() ) : $this->query->the_post();
 	/* we get the notices */
 	$notice = $this->notices($entries);
 
-	echo '<div class="hwr-album">';
+	echo '<div class="pur-album">';
 
 		if ( !empty($this->set['album-show-title']) || !empty($this->set['album-show-description']) )
 			echo '<div class="album-content-wrap">';

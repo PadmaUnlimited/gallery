@@ -1,8 +1,8 @@
 <?php
 
-function hwr_gallery_depreciate_hooks() {
+function padma_gallery_depreciate_hooks() {
 	
-	$base = '.block-type-hwr-gallery .hwr-gallery';
+	$base = '.block-type-padma-gallery .padma-gallery';
 	
 	$double = '<span class="double-indent"></span>';
 		
@@ -24,43 +24,43 @@ function hwr_gallery_depreciate_hooks() {
 		array(
 			'id' => 'block-before-',
 			'name' => 'Before Block',
-			'selector' => $base . ' .hwr-block-before',
+			'selector' => $base . ' .pur-block-before',
 			'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow')
 		),
 		array(
 			'id' => 'block-title',
 			'name' => 'Block Title',
-			'selector' => $base . ' .hwr-block-title',
+			'selector' => $base . ' .pur-block-title',
 			'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow')
 		),
 		array(
 			'id' => 'block-title-alt',
 			'name' => 'Block Title Alt',
-			'selector' => $base . ' .hwr-block-title span',
+			'selector' => $base . ' .pur-block-title span',
 			'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow')
 		),
 		array(
 			'id' => 'block-content',
 			'name' => 'Block Description',
-			'selector' => $base . ' .hwr-block-content',
+			'selector' => $base . ' .pur-block-content',
 			'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow')
 		),
 		array(
 			'id' => 'block-footer',
 			'name' => 'Block Footer',
-			'selector' => $base . ' .hwr-block-footer',
+			'selector' => $base . ' .pur-block-footer',
 			'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'text-shadow')
 		),
 		array(
 			'id' => 'block-after',
 			'name' => 'After Block',
-			'selector' => $base . ' .hwr-block-after',
+			'selector' => $base . ' .pur-block-after',
 			'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow')
 		),
 		array(
 			'id' => 'items-container',
 			'name' => 'Items Container',
-			'selector' => $base . ' .hwr-album',
+			'selector' => $base . ' .pur-album',
 			'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'margins', 'padding', 'nudging', 'overflow', 'text-shadow')
 		),
 		array(
@@ -130,7 +130,7 @@ function hwr_gallery_depreciate_hooks() {
 			'properties' => array('fonts', 'background', 'borders', 'rounded-corners', 'box-shadow', 'padding', 'nudging', 'overflow', 'text-shadow'),
 			'states' => array(
 				'hover' => $base . ' .pager-item:hover', 
-				'active' => $base . ' .hwr-active-slide .pager-item,' . $base . ' .pager-item.hwr-active'
+				'active' => $base . ' .pur-active-slide .pager-item,' . $base . ' .pager-item.pur-active'
 			)
 		),
 		/* sub header */

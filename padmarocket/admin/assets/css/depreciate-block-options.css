@@ -1,0 +1,44 @@
+/* admin header */
+.pur-admin-header { background-color: rgba(0,0,0,0.2); border-radius: 4px; clear: both; margin: 20px 0 10px; padding: 10px; font-size: 10px; text-transform: uppercase; font-weight: bold; color: #777; width: 100%; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+h3.pur-admin-header:first-of-type { margin-top: 3px; }
+
+/* admin notice */
+.panel .pur-admin-notice { display: none; background: #444; border: 1px solid #000; font-size: 13px; line-height: 23px; position: absolute; z-index: 99999; opacity: .95; width: 400px; right: 15px; top: 65px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #F9F9F9; margin-bottom: 20px; padding: 20px 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; box-shadow: 0 0 5px #000; -moz-box-shadow: 0 0 5px #000; -webkit-box-shadow: 0 0 5px #000; }
+.pur-admin-notice a.pur-close { position: absolute; width: auto; right: 5px; top: 4px; padding: 0 4px 2px; line-height: 100%; color: #bbb; background: #222; border: 0; text-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+.pur-admin-notice a.pur-close:hover { background: #000; }
+.pur-admin-notice a.pur-close:active { margin-top: 1px; }
+
+/* admin btn generic */
+.pur-admin-btn { font-size: 13px; font-weight: normal; padding: 3px 8px; border-radius: 4px; text-decoration: none; }
+
+/* admin btn gray */
+.pur-admin-btn.gray { background: #333; font-weight: 500; color: #F9F9F9; padding: 1px 8px 3px; }
+.pur-admin-btn.gray:hover { background: #222; }
+.pur-admin-btn.gray.active,
+.pur-admin-btn.gray:active { background: #222; -webkit-box-shadow: inset 0 0 3px 1px rgba(20, 20, 20, .7); box-shadow: inset 0 0 3px 1px rgba(20, 20, 20, .7); }
+
+/* admin btn black */
+.pur-admin-btn.black { background: #444; color: #ccc; }
+.pur-admin-btn.black:hover { background: #333; }
+.pur-admin-btn.black.active,
+.pur-admin-btn.black:active { background: #333; -webkit-box-shadow: inset 0 0 3px 1px rgba(20, 20, 20, .7); box-shadow: inset 0 0 3px 1px rgba(20, 20, 20, .7); }
+
+/* admin btn green */
+.pur-admin-btn.green { background: #567D11; color: #fff; }
+.pur-admin-btn.green:hover { background: #43610C; }
+.pur-admin-btn.green.active,
+.pur-admin-btn.green:active { background: #43610C; -webkit-box-shadow: inset 0 0 3px 1px rgba(44, 63, 8, .7); box-shadow: inset 0 0 3px 1px rgba(44, 63, 8, .7); }
+
+
+
+/* before version 3.6 */
+/* elements header */
+.element-header,
+.element-sub-header { display: block; cursor: default; font-weight: 300; color: #666; }
+.element-header { margin-left: -20px; padding-left: 10px; }
+.element-sub-header { margin-left: 0 0 10px -10px; padding-left: 0; }
+
+/* ve design panel */
+#design-editor-sub-elements .parent-element-block-pur-gallery span.double-indent { display: inline-block; width: 10px; padding: 0; }
+#design-editor-sub-elements .parent-element-block-pur-gallery span { padding-left: 20px }
+#context-menu-inspector span.double-indent { display: none; }

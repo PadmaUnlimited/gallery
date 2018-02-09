@@ -3,12 +3,12 @@
 ;(function($) {
 
 	/* this function is where we are going to right all custom js for the block */
-	hwr_gallery_js = function(id) {
+	padma_gallery_js = function(id) {
 
-		var api = hwr.blockOptionsApi;
+		var api = pur.blockOptionsApi;
 
 		/* we modify the view and dipslay notices */
-		if ( api.getPageLayout() == 'hwr_gallery' ) {
+		if ( api.getPageLayout() == 'padma_gallery' ) {
 
 			api.update_select(api.getInput(id, 'view'), 'album', 'album');
 			api.select_status(api.getInput(id, 'view'), ['albums', 'media']);

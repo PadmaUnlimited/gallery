@@ -1,12 +1,12 @@
 <?php
 
-class HeadwayGalleryBlockDisplay {
+class PadmaGalleryBlockDisplay {
 
 	function __construct($block) {
 
 		$this->block     = $block;
 		$this->page_info = self::page_info($block);
-		$this->set       = HeadwayHwrGalleryBlockOptions::settings($this->block);
+		$this->set       = PadmaGalleryBlockOptions::settings($this->block);
 		$this->cond_set  = $this->cond_set();
 		$this->columns   = $this->set_columns();
 		$this->notice    = $this->notices();
@@ -37,7 +37,7 @@ class HeadwayGalleryBlockDisplay {
 				$js .= 'jQuery(document).ready(function(){';
 
 					/* we remove no-js class */
-					$js .= ' $(".hwr-gallery").removeClass("no-js");';
+					$js .= ' $(".padma-gallery").removeClass("no-js");';
 
 				$js .= '});';
 
@@ -52,7 +52,7 @@ class HeadwayGalleryBlockDisplay {
 
 						$(".slider-loading").remove();
 
-						$(".hwr-album").each( function() {
+						$(".pur-album").each( function() {
 
 						thumb_count = $(".pager-wrap").data("thumb-count");
 						thumb_count_set = ' . $this->set['slider-thumb-count'] . ';
@@ -66,7 +66,7 @@ class HeadwayGalleryBlockDisplay {
 				if ( $this->set['slider-pager'] && $this->set['slider-enable-pager-thumbs'] && $this->set['slider-pager-show-all'] == false )
 						$js .= '
 							$("#carousel-' . $this->block['id'] . '-" + i).flexslider({
-								namespace: "hwr-",
+								namespace: "pur-",
 								directionNav: ' . $pager_direction_nav . ',
 								animation: "slide",
 								controlNav: false,
@@ -82,7 +82,7 @@ class HeadwayGalleryBlockDisplay {
 				if ( $this->set['layout'] == 'slider' )
 						$js .= '
 							$("#slider-' . $this->block['id'] . '-" + i).flexslider({
-								namespace: "hwr-",
+								namespace: "pur-",
 								animation: "' . $this->set['slider-effect'] . '",
 								easing: "' . $this->set['slider-easing'] .'",
 								useCSS: false,
@@ -124,9 +124,9 @@ class HeadwayGalleryBlockDisplay {
 
 		global $post;
 
-		$block_data = HeadwayBlocksData::get_block($block);
+		$block_data = PadmaBlocksData::get_block($block);
 
-		if ( version_compare('3.7', HEADWAY_VERSION, '<=') )
+		if ( version_compare('3.7', PADMA_VERSION, '<=') )
 			$page_infos  = explode('||', $block_data['layout']);
 		else
 			$page_infos  = explode('-', $block_data['layout']);
@@ -154,7 +154,7 @@ class HeadwayGalleryBlockDisplay {
 
 	function view() {
 
-		if ( $this->page_info['page-type'] == 'hwr_gallery' && !is_archive() )
+		if ( $this->page_info['page-type'] == 'padma_gallery' && !is_archive() )
 			return 'album';
 
 		elseif ( $this->page_info['page-type'] == 'attachment' )
@@ -229,7 +229,7 @@ class HeadwayGalleryBlockDisplay {
 
 	function is_visual_editor() {
 
-		if ( headway_get('visual-editor-open') || HeadwayRoute::is_visual_editor_iframe() || headway_post('mode') == 'design' )
+		if ( padma_get('visual-editor-open') || PadmaRoute::is_visual_editor_iframe() || padma_post('mode') == 'design' )
 			return true;
 
 		return false;
@@ -241,9 +241,9 @@ class HeadwayGalleryBlockDisplay {
 		global $post;
 
 		/* we set the more url */
-		$get_more_link_url = get_post_meta( $post->ID, 'hwr_gallery_readon_link', true );
+		$get_more_link_url = get_post_meta( $post->ID, 'padma_gallery_readon_link', true );
 
-		if ( $this->page_info['page-type'] == 'hwr_gallery' && empty($get_more_link_url) )
+		if ( $this->page_info['page-type'] == 'padma_gallery' && empty($get_more_link_url) )
 			return false;
 
 		return true;
@@ -256,13 +256,13 @@ class HeadwayGalleryBlockDisplay {
 		global $post;
 
 		/* we set the more url */
-		$get_meta_url = get_post_meta( $post->ID, 'hwr_gallery_readon_link', true );
+		$get_meta_url = get_post_meta( $post->ID, 'padma_gallery_readon_link', true );
 		$get_url = get_permalink();
 
 		/* we set the image link */
 		if ( !empty($this_image) && $this->view() == 'album' ) {
 
-			$get_meta_url = get_post_meta( $this_image['id'], '_hwr_custom_link', true );
+			$get_meta_url = get_post_meta( $this_image['id'], '_padma_custom_link', true );
 			$get_url = add_query_arg(array('uploaded_to' => $post->ID), get_attachment_link($this_image['id']));
 
 		}
@@ -356,7 +356,7 @@ class HeadwayGalleryBlockDisplay {
 		);
 
 		/* we get the gallery image */
-		$album_img = $attachment ? array(0 => $post_id) : get_post_meta( $post->ID, 'hwr_gallery_image', true );
+		$album_img = $attachment ? array(0 => $post_id) : get_post_meta( $post->ID, 'padma_gallery_image', true );
 
 		/* we get the album images datas and build an array with it */
 		$album_img_entries = array();
@@ -414,8 +414,8 @@ class HeadwayGalleryBlockDisplay {
 		$entries = array(
 			'post-id' => $post->ID,
 			'title' => get_the_title(),
-			'caption' => esc_html( get_post_meta( $post->ID, 'hwr_gallery_caption', true ) ),
-			'description' => get_post_meta( $post->ID, 'hwr_gallery_description', true ),
+			'caption' => esc_html( get_post_meta( $post->ID, 'padma_gallery_caption', true ) ),
+			'description' => get_post_meta( $post->ID, 'padma_gallery_description', true ),
 			'featured-image' => $featured_img_entries,
 			'album-images' => $album_img_entries
 		);
@@ -528,9 +528,9 @@ class HeadwayGalleryBlockDisplay {
 		global $post;
 
 		$query_options = array();
-		$query_options['post_type'] = 'hwr_gallery';
+		$query_options['post_type'] = 'padma_gallery';
 
-		if ( $this->page_info['page-type'] == 'hwr_gallery' ) {
+		if ( $this->page_info['page-type'] == 'padma_gallery' ) {
 
 			/* if $this->page_info['page-id'] is not set, it means we are on the gallery post type page. When then display a notice informing the users that they are setting the default style of all the children. */
 			if ( empty($this->page_info['page-id']) && $this->is_visual_editor() ) {
@@ -665,18 +665,18 @@ class HeadwayGalleryBlockDisplay {
 
 	function dimensions($images_count = 1) {
 
-		if ( version_compare('3.5', HEADWAY_VERSION, '<=') ) {
+		if ( version_compare('3.5', PADMA_VERSION, '<=') ) {
 
-			if ( version_compare('3.7', HEADWAY_VERSION, '<=') )
-				$block_wrapper = HeadwayWrappersData::get_wrapper(headway_get('wrapper', $this->block));
+			if ( version_compare('3.7', PADMA_VERSION, '<=') )
+				$block_wrapper = PadmaWrappersData::get_wrapper(padma_get('wrapper', $this->block));
 			else
-				$block_wrapper = HeadwayWrappers::get_wrapper(headway_get('wrapper', $this->block));
+				$block_wrapper = PadmaWrappers::get_wrapper(padma_get('wrapper', $this->block));
 
-			$block_width = headway_get('fluid-grid', $block_wrapper) ? 2000 : HeadwayBlocksData::get_block_width($this->block);
+			$block_width = padma_get('fluid-grid', $block_wrapper) ? 2000 : PadmaBlocksData::get_block_width($this->block);
 
 		} else {
 
-			$block_width = HeadwayBlocksData::get_block_width($this->block);
+			$block_width = PadmaBlocksData::get_block_width($this->block);
 
 		}
 
@@ -841,7 +841,7 @@ class HeadwayGalleryBlockDisplay {
 
 		$image_url = empty($featured_image_url) ? $this_image['url'] : $featured_image_url;
 
-		$resized_url = headway_resize_image($image_url, $image_width, $image_height, true);
+		$resized_url = padma_resize_image($image_url, $image_width, $image_height, true);
 
 		if ( $this->view() == 'media' ) {
 
@@ -850,9 +850,9 @@ class HeadwayGalleryBlockDisplay {
 
 		}
 
-		$get_meta_url = get_post_meta( $this_image['id'], '_hwr_custom_link', true );
+		$get_meta_url = get_post_meta( $this_image['id'], '_padma_custom_link', true );
 
-		$lighbox_url = $this->set['lightbox-enable-resize'] ? headway_resize_image($this_image['url'], $this->set['lightbox-width'], $this->set['lightbox-height'], true) : $this_image['url'];
+		$lighbox_url = $this->set['lightbox-enable-resize'] ? padma_resize_image($this_image['url'], $this->set['lightbox-width'], $this->set['lightbox-height'], true) : $this_image['url'];
 
 		if ( !empty($get_meta_url) && $this->set['enable-lightbox'] && $this->set['enable-image-link'] )
 			$lighbox_url = $get_meta_url;
@@ -892,7 +892,7 @@ class HeadwayGalleryBlockDisplay {
 		$block_dim = $this->dimensions($image_count);
 
 		/* we resize the album thumb */
-		$resized_url = headway_resize_image($this_thumb['url'], ceil($block_dim['pager-thumb-width']), ceil($block_dim['pager-thumb-height']), true);
+		$resized_url = padma_resize_image($this_thumb['url'], ceil($block_dim['pager-thumb-width']), ceil($block_dim['pager-thumb-height']), true);
 
 		return '<img class="thumb-image" src="' . $resized_url  . '" alt="' . $this_thumb['alt']  . '" ' . $this->display_tags('img', 'title', $this_thumb['title'], false) . ' />';
 
@@ -911,12 +911,12 @@ class HeadwayGalleryBlockDisplay {
 
 			case $this->columns == 1 ? 0 : 1:
 				if ( $i == 0 ) {
-					echo '<div class="hwr-row hwr-row1 odd first clear">';
+					echo '<div class="pur-row pur-row1 odd first clear">';
 				} elseif ( $i == 1 ) {
-					echo '<div class="hwr-row hwr-row1 odd first clear">';
+					echo '<div class="pur-row pur-row1 odd first clear">';
 				} else {
 					$columns_alt_class = $row % 2 == 0 ? ' even' : ' odd';
-					echo '</div><!-- row close --><div class="hwr-row hwr-row' . $row . $columns_alt_class . ' clear">';
+					echo '</div><!-- row close --><div class="pur-row pur-row' . $row . $columns_alt_class . ' clear">';
 				}
 			break;
 
@@ -934,12 +934,12 @@ class HeadwayGalleryBlockDisplay {
 		/* we initiate the query */
 		$this->wp_query();
 
-		echo '<div class="hwr-grid hwr-cols' . $this->columns . ' ' . $this->view() . '-view"><!-- grid open -->';
+		echo '<div class="pur-grid pur-cols' . $this->columns . ' ' . $this->view() . '-view"><!-- grid open -->';
 
 			if ( $this->page_info['page-type'] == 'attachment' )
 				echo $this->render('views/media.php', array('block' => $this->block));
 
-			elseif ( $this->page_info['page-type'] == 'hwr_gallery' && !is_archive() )
+			elseif ( $this->page_info['page-type'] == 'padma_gallery' && !is_archive() )
 				echo $this->render('views/album.php', array('block' => $this->block));
 
 			else
@@ -948,7 +948,7 @@ class HeadwayGalleryBlockDisplay {
 		echo '</div><!-- grid close -->';
 
 		/* we display a notice of there isn't any albums puplish */
-		$count_posts = wp_count_posts( 'hwr_gallery' );
+		$count_posts = wp_count_posts( 'padma_gallery' );
 		$published_posts = $count_posts->publish;
 
 		if ( $published_posts == 0 )

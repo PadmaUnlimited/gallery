@@ -2,7 +2,7 @@
 
 class butlerAdminUpdate {
 
-    /* The slug of the product. This will be provided to you by the Headway team. */
+    /* The slug of the product. This will be provided to you by the Padma team. */
 	private $slug;
 
 	/* The path to the product. If a theme, use get_option('stylesheet'), plugins use plugin_basename(__FILE__) */

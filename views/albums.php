@@ -4,7 +4,7 @@ $post_count = $this->query->post_count;
 $count      = 1;
 	
 /* we build the output */
-echo '<div class="hwr-album">'; 
+echo '<div class="pur-album">'; 
 	
 	while ( $this->query->have_posts() ) : $this->query->the_post();
 		
