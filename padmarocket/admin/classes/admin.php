@@ -20,7 +20,7 @@ class PUR_Admin {
 		$this->register_options();
 										
 		if ( butler_get_option( 'admin_bar_display_menu', 'padma_framework' ) )
-			add_action( 'admin_bar_menu', array( $this, 'add_admin_pur' ), 76 );
+			//add_action( 'admin_bar_menu', array( $this, 'add_admin_pur' ), 76 );
 
 		/* add js global var to head */
 		add_action( 'padma_visual_editor_head', array( &$this, 'padma_wp_head_script' ) );
