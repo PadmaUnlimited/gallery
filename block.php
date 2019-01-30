@@ -3,18 +3,13 @@
 class PadmaGalleryBlock extends PadmaBlockAPI {
 
 	public $id 					 = 'padma-gallery';
-
 	public $name 				 = 'Gallery';
-
 	public $options_class 		 = 'PadmaGalleryBlockOptions';
-
 	public $core_block 			 = false;
-
 	static public $block 		 = null;
-
 	public $show_content_in_grid = false;
-
 	public $allow_titles 		= false;
+	public $categories 		= array('media');
 
 
 	function init() {

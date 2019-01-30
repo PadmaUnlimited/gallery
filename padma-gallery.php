@@ -4,8 +4,8 @@ Plugin Name: Padma Gallery Block
 Plugin URI: http://www.padmaunlimited.com/plugins/gallery
 Description: Simple, Flexible & Powerful - The Ultimate Gallery System for Padma.
 Version: 0.0.1
-Author: Plasma Soluciones, Headway Rocket
-Author URI: http://www.plasma.cr
+Author: Padma Unlimited team
+Author URI: https://www.padmaunlimited.com
 License: GNU GPL v2
 */
 
