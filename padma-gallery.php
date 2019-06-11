@@ -3,7 +3,7 @@
 Plugin Name: Padma Gallery
 Plugin URI: http://www.padmaunlimited.com/plugins/gallery
 Description: Simple, Flexible & Powerful - The Ultimate Gallery System for Padma.
-Version: 0.0.2
+Version: 0.0.3
 Author: Padma Unlimited team
 Author URI: https://www.padmaunlimited.com
 License: GNU GPL v2
@@ -46,19 +46,6 @@ function padma_gallery_register() {
 	require_once 'gallery-display.php';
 	require_once 'depreciate.php';
 	return padma_register_block('PadmaGalleryBlock', plugins_url(false, __FILE__));
-
-}
-
-
-/* enable auto updates
-***************************************************************/
-add_action('init', 'padma_gallery_extend_updater');
-
-function padma_gallery_extend_updater() {
-
-	if ( ! empty ( $GLOBALS[ 'PadmaUpdater' ] ) ){
-	    $GLOBALS[ 'PadmaUpdater' ]->updater('padma-gallery',__DIR__);
-	}
 
 }
 
