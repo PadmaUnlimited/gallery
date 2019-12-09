@@ -3,7 +3,7 @@
 Plugin Name: Padma Gallery
 Plugin URI: http://www.padmaunlimited.com/plugins/gallery
 Description: Simple, Flexible & Powerful - The Ultimate Gallery System for Padma.
-Version: 0.0.4
+Version: 1.0.0
 Author: Padma Unlimited team
 Author URI: https://www.padmaunlimited.com
 License: GNU GPL v2
@@ -48,7 +48,10 @@ function padma_gallery_register() {
 	$class = 'PadmaGalleryBlock';
 	$block_type_url = substr(WP_PLUGIN_URL . '/' . str_replace(basename(__FILE__), '', plugin_basename(__FILE__)), 0, -1);		
 	$class_file = __DIR__ . '/block.php';
-	$icons = __DIR__;
+	$icons = array(
+			'path' => __DIR__,
+			'url' => $block_type_url
+		);
 
 	return padma_register_block(
 		$class,
@@ -56,8 +59,6 @@ function padma_gallery_register() {
 		$class_file,
 		$icons
 	);
-
-	return padma_register_block('PadmaGalleryBlock', plugins_url(false, __FILE__));
 
 }
 
