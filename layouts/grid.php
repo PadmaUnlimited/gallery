@@ -31,7 +31,7 @@ foreach ( $params['album-images'] as $i => $this_image ) {
 	$meta_count = $this->view() != 'album' && $this->set['img-enable-title-count'] ? $params['meta-count'] : '';
 
 	/* we get the image metas html */
-	$image_metas_html = $this->display_metas($$params['metas'], $meta_count);
+	$image_metas_html = $this->display_metas($params['metas'], $meta_count);
 
 	$alt_class = $i % 2 == 0 ? 'even' : 'odd';
 
