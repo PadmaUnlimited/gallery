@@ -5,7 +5,7 @@
     	/* Image Radio */
 		$('.btr-imageradio input:checked:enabled').closest('label').addClass('selected');
 		
-		$('.btr-imageradio label').live('click', function(e) {
+		$('.btr-imageradio label').on('click', function(e) {
 		    		
 			$(this).closest('fieldset').find('label').removeClass('selected');
 			$(this).closest('label').addClass('selected');

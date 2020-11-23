@@ -16,7 +16,7 @@ class PadmaGalleryBlock extends PadmaBlockAPI {
 
 		//$this->do_maintenance();
 
-		if ( version_compare(PADMA_VERSION, '3.6', '>=') ) {
+		if ( version_compare(PADMA_VERSION, '1.0.0', '>=') ) {
 
 			add_action('padma_db_upgrade', array($this, 'merge_default_design_data'));
 			add_action('padma_visual_editor_save', array($this, 'merge_default_design_data'));

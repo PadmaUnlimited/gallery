@@ -10,7 +10,7 @@ jQuery.noConflict();
 		var ui_sortable     = '.ui-sortable';
 		var thickbox_height = ($(window).height() * 90) / 100;
 
-		$('.pur-upload-image').live('click', function( event ){
+		$(document).on('click', '.pur-upload-image', function( event ){
 
 		  event.preventDefault();
 
@@ -107,12 +107,12 @@ jQuery.noConflict();
 		}
 
 		/* we show the thumbnail toolbar on hover. */
-		$(thumb).live('mouseover', function(){
+		$(thumb).on('mouseover', function(){
 
 			$(this).find(thumb_toolbar).fadeIn('fast')
 									   .animate({ opacity: 1 }, {queue: false, duration: 'fast'});
 
-		}).live('mouseout',  function() {
+		}).on('mouseout',  function() {
 
 		    $(this).find(thumb_toolbar).animate({ opacity: 0 }, {queue: false, duration: 'fast'});
 
@@ -120,7 +120,7 @@ jQuery.noConflict();
 
 
 		/* we remove the thumbnail and update the count when removed link is clicked */
-		$(thumb_toolbar).find('.pur-remove').live('click', function(event ){
+		$(thumb_toolbar).find('.pur-remove').on('click', function(event ){
 
 			event.preventDefault();
 
@@ -139,7 +139,7 @@ jQuery.noConflict();
 
 
 		/* we fire the edit iframe when edit link is clicked */
-		$(thumb_toolbar).find('.pur-edit').live('click', function( event ){
+		$(thumb_toolbar).find('.pur-edit').on('click', function( event ){
 
 			event.preventDefault();
 

@@ -15,7 +15,7 @@
 		var thumb_toolbar   = '.btr-toolbar';
 		var thickbox_height = ($(window).height() * 90) / 100;
 		
-		$('.btr-upload-image').live('click', function( event ) {
+		$('.btr-upload-image').on('click', function( event ) {
 			
 			var media_iframe;
 			
@@ -104,7 +104,7 @@
 		
 				
 		/* we remove the thumbnail and update the count when removed link is clicked */		  	
-		$(thumb_toolbar).find('.dashicons-post-trash').live('click', function(event ) {
+		$(thumb_toolbar).find('.dashicons-post-trash').on('click', function(event ) {
 		
 			event.preventDefault();
 		
@@ -130,7 +130,7 @@
 		 
 		
 		/* we fire the edit iframe when edit link is clicked */
-		$(thumb_toolbar).find('.dashicons-edit').live('click', function( event ) {
+		$(thumb_toolbar).find('.dashicons-edit').on('click', function( event ) {
 		
 			event.preventDefault();
 						

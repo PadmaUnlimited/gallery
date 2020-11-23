@@ -15,7 +15,7 @@ jQuery.noConflict();
 		
 		
 		/* we go a bit fancy and add a spinner on click */
-		jQuery('.media-upload-form #save').live('click', function(){
+		jQuery('.media-upload-form #save').on('click', function(){
 			
 			$('.wrap').fadeOut(500);
 			$('.saving-loader').delay(500).fadeIn();

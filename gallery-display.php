@@ -126,7 +126,7 @@ class PadmaGalleryBlockDisplay {
 
 		$block_data = PadmaBlocksData::get_block($block);
 
-		if ( version_compare('3.7', PADMA_VERSION, '<=') )
+		if ( version_compare('1.0.0', PADMA_VERSION, '<=') )
 			$page_infos  = explode('||', $block_data['layout']);
 		else
 			$page_infos  = explode('-', $block_data['layout']);
@@ -665,9 +665,9 @@ class PadmaGalleryBlockDisplay {
 
 	function dimensions($images_count = 1) {
 
-		if ( version_compare('3.5', PADMA_VERSION, '<=') ) {
+		if ( version_compare('1.0.0', PADMA_VERSION, '<=') ) {
 
-			if ( version_compare('3.7', PADMA_VERSION, '<=') )
+			if ( version_compare('1.0.0', PADMA_VERSION, '<=') )
 				$block_wrapper = PadmaWrappersData::get_wrapper(padma_get('wrapper', $this->block));
 			else
 				$block_wrapper = PadmaWrappers::get_wrapper(padma_get('wrapper', $this->block));
